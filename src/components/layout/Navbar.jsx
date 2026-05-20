@@ -9,7 +9,7 @@ export default function Navbar() {
     <nav className="sticky top-0 z-50 border-b border-white/10 backdrop-blur-xl bg-slate-950/80 px-6 py-4 shadow-soft">
       <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4">
         <Link to="/" className="flex items-center gap-3 text-white">
-          <div className="grid h-11 w-11 place-items-center rounded-[1.5rem] bg-gradient-to-br from-violet-500 to-cyan-400 shadow-floating">
+          <div className="grid h-11 w-11 place-items-center rounded-3xl bg-linear-to-br from-violet-500 to-cyan-400 shadow-floating">
             <Sparkles size={18} className="text-white" />
           </div>
           <div>

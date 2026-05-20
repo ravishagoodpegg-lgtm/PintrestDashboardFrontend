@@ -12,7 +12,7 @@ export default function App() {
   return (
     <AuthProvider>
       <div className="relative min-h-screen bg-slate-950 text-slate-100 overflow-hidden">
-        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,_rgba(124,58,237,0.18),_transparent_30%),radial-gradient(circle_at_bottom_right,_rgba(14,165,233,0.16),_transparent_25%)]" />
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(124,58,237,0.18),transparent_30%),radial-gradient(circle_at_bottom_right,rgba(14,165,233,0.16),transparent_25%)]" />
         <Navbar />
         <main className="relative">
           <Routes>
