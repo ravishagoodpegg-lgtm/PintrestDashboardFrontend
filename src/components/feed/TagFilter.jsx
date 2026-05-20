@@ -1,21 +1,26 @@
-const TAGS = ['all', 'minimal', 'nature', 'interior', 'fashion', 'food'];
+const TAGS = ["all", "minimal", "nature", "interior", "fashion", "food"];
 
 export default function TagFilter({ activeTag, onChange }) {
   return (
-    <div className="flex gap-3 mb-6 overflow-x-auto pb-2">
-      {TAGS.map(t => (
-        <button
-          key={t}
-          onClick={() => onChange(t === 'all' ? '' : t)}
-          className={`px-4 py-2 rounded-full capitalize whitespace-nowrap text-sm font-medium transition ${
-            activeTag === t || (!activeTag && t === 'all')
-              ? 'bg-black text-white'
-              : 'bg-gray-100 hover:bg-gray-200'
-          }`}
-        >
-          {t}
-        </button>
-      ))}
+    <div className="mb-8 overflow-x-auto pb-2">
+      <div className="flex gap-3">
+        {TAGS.map((t) => {
+          const selected = activeTag === t || (!activeTag && t === "all");
+          return (
+            <button
+              key={t}
+              onClick={() => onChange(t === "all" ? "" : t)}
+              className={`px-5 py-3 rounded-full text-sm font-semibold transition-all duration-200 ${
+                selected
+                  ? "bg-gradient-to-r from-violet-500 to-cyan-400 text-white shadow-soft"
+                  : "bg-slate-900/70 text-slate-300 hover:bg-slate-800/90 hover:text-white"
+              }`}
+            >
+              {t}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 }
