@@ -15,14 +15,22 @@ export default function Feed() {
   const fetchPins = async () => {
     try {
       const { data } = await getFeed(tag);
-      setPins(data);
+      const normalizedPins = Array.isArray(data)
+        ? data
+        : data?.pins || data?.data || [];
+      setPins(normalizedPins);
     } catch (err) {
       console.error("Failed to fetch pins", err);
+      setPins([]);
     }
   };
 
   const updatePin = (updated) => {
-    setPins((prev) => prev.map((p) => (p._id === updated._id ? updated : p)));
+    setPins((prev) =>
+      Array.isArray(prev)
+        ? prev.map((p) => (p._id === updated._id ? updated : p))
+        : []
+    );
   };
 
   return (
