@@ -7,6 +7,7 @@ import Register from "./pages/Register";
 import CreatePin from "./pages/CreatePin";
 import Profile from "./pages/Profile";
 import PrivateRoute from "./components/PrivateRoute";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 export default function App() {
   return (
@@ -19,6 +20,7 @@ export default function App() {
             <Route path="/" element={<Feed />} />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route
               path="/create"
               element={
